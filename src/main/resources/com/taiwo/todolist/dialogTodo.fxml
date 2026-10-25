@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<DialogPane fx:id="dialogWindow" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.taiwo.todolist.DialogController">
+    <headerText>
+        This is where the text would be
+    </headerText>
+    <content>
+        <GridPane>
+            <Label text="The item title" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id = "itemTextId"  GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Item description" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id = "itemDescriptionId"  GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true"/>
+            <Label text="Deadline date" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" spacing="10">
+                <DatePicker fx:id = "datePickerId"   />
+                <Button fx:id="clearButton" text="CLEAR"/>
+            </HBox>
+
+        </GridPane>
+    </content>
+
+</DialogPane>

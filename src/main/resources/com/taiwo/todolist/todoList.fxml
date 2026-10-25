@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<BorderPane fx:id = "mainWindow" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.taiwo.todolist.Controller">
+    <top>
+        <MenuBar>
+            <Menu text="Action">
+                <MenuItem text="Add" onAction="#openDialog"/>
+                <MenuItem text="Delete"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+    <ListView fx:id = "itemsListView" onMouseClicked="#showSelectedItems">
+    </ListView>
+    </left>
+    <center>
+        <VBox>
+            <TextArea fx:id = "showTextArea" style="-fx-text-alignment: center" VBox.vgrow="ALWAYS"
+             wrapText="true"/>
+            <HBox>
+                <Label text="Due: ">
+                    <font>
+                        <Font name="Times new Roman bold" size="20"/>
+                    </font>
+                </Label>
+                <Label fx:id="showDueDate">
+                    <font>
+                        <Font name="Times new Roman bold" size="20"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+
+
+    </center>
+
+</BorderPane>
